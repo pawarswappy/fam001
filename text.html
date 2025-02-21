@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hotel Booking Section</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+      /* General Styles */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f8f9fc;
+    margin: 0;
+    padding: 0;
+}
+
+/* Booking Section */
+.booking-section {
+    background: url('background.jpg') no-repeat center center/cover;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+}
+
+.booking-container {
+    background: white;
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+
+.booking-form {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.booking-form input, .booking-form select {
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 14px;
+}
+
+.btn {
+    background: #ffbb55;
+    border: none;
+    padding: 10px 15px;
+    font-size: 14px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: 0.3s;
+}
+
+.btn:hover {
+    background: #ff9900;
+}
+
+/* Welcome Section */
+.welcome-section {
+    padding: 50px 10%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.welcome-container {
+    display: flex;
+    gap: 30px;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.welcome-text {
+    max-width: 50%;
+}
+
+.welcome-text h1 {
+    font-size: 36px;
+    font-weight: bold;
+}
+
+.welcome-text p {
+    color: #555;
+    font-size: 16px;
+    line-height: 1.6;
+}
+
+.buttons {
+    margin-top: 15px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.video-link {
+    color: #ff9900;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.video-link:hover {
+    text-decoration: underline;
+}
+
+.welcome-image {
+    position: relative;
+}
+
+.welcome-image img {
+    width: 100%;
+    max-width: 400px;
+    border-radius: 10px;
+}
+
+.circle-image {
+    position: absolute;
+    bottom: -40px;
+    right: -40px;
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    border: 5px solid white;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Responsive Design */
+@media (max-width: 900px) {
+    .welcome-container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .welcome-text {
+        max-width: 100%;
+    }
+
+    .welcome-image img {
+        max-width: 300px;
+    }
+
+    .circle-image {
+        width: 80px;
+        height: 80px;
+        bottom: -30px;
+        right: -30px;
+    }
+}
+
+@media (max-width: 600px) {
+    .booking-form {
+        flex-direction: column;
+    }
+
+    .booking-container {
+        flex-wrap: wrap;
+    }
+}
+
+    </style>
+</head>
+<body>
+
+    <!-- Booking Form -->
+    <section class="booking-section">
+        <div class="booking-container">
+            <div class="booking-form">
+                <input type="date" placeholder="Check In">
+                <input type="date" placeholder="Check Out">
+                <select>
+                    <option value="1">1 Adult</option>
+                    <option value="2">2 Adults</option>
+                    <option value="3">3 Adults</option>
+                </select>
+                <select>
+                    <option value="1">1 Child</option>
+                    <option value="2">2 Children</option>
+                    <option value="3">3 Children</option>
+                </select>
+                <button class="btn">Check Availability</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Welcome Section -->
+    <section class="welcome-section">
+        <div class="welcome-container">
+            <div class="welcome-text">
+                <h1>Welcome!</h1>
+                <p>
+                    Far far away, behind the word mountains, far from the countries Vokalia and Consonantia,
+                    there live the blind texts. Separated they live in Bookmarks grove right at the coast
+                    of the Semantics, a large language ocean.
+                </p>
+                <div class="buttons">
+                    <button class="btn btn-primary">Learn More</button>
+                    <span>or</span>
+                    <a href="#" class="video-link">SEE VIDEO</a>
+                </div>
+            </div>
+            <div class="welcome-image">
+                <img src="bedroom.jpg" alt="Bedroom">
+                <img src="woman-eating.jpg" alt="Woman Eating" class="circle-image">
+            </div>
+        </div>
+    </section>
+
+</body>
+</html>
